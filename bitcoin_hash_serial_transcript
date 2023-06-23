@@ -1,0 +1,158 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do bitcoin_hash_serial_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+D:/Varsha/serial {D:/Varsha/serial/bitcoin_hash_serial.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:50:44 on Jun 10,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/Varsha/serial" D:/Varsha/serial/bitcoin_hash_serial.sv 
+# -- Compiling module bitcoin_hash_serial
+# 
+# Top level modules:
+# 	bitcoin_hash_serial
+# End time: 16:50:45 on Jun 10,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work {D:/Varsha/serial/bitcoin_hash_serial.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:51:08 on Jun 10,2023
+# vlog -reportprogress 300 -work work D:/Varsha/serial/bitcoin_hash_serial.sv 
+# -- Compiling module bitcoin_hash_serial
+# 
+# Top level modules:
+# 	bitcoin_hash_serial
+# End time: 16:51:08 on Jun 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 30 -work work {D:/Varsha/serial/tb_bitcoin_hash_serial.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:51:08 on Jun 10,2023
+# vlog -reportprogress 30 -work work D:/Varsha/serial/tb_bitcoin_hash_serial.sv 
+# -- Compiling module tb_bitcoin_hash
+# 
+# Top level modules:
+# 	tb_bitcoin_hash
+# End time: 16:51:08 on Jun 10,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.tb_bitcoin_hash
+# vsim work.tb_bitcoin_hash 
+# Start time: 16:51:13 on Jun 10,2023
+# Loading sv_std.std
+# Loading work.tb_bitcoin_hash
+# Loading work.bitcoin_hash_serial
+add wave -position insertpoint  \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/num_nonces \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/k \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/clk \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/reset_n \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/start \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/message_addr \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/output_addr \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/done \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/mem_clk \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/mem_we \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/mem_addr \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/mem_write_data \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/mem_read_data \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/hout0 \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/state \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/h0 \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/h1 \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/h2 \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/h3 \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/h4 \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/h5 \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/h6 \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/h7 \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/a \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/b \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/c \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/d \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/e \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/f \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/g \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/h \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/cur_write_data \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/wr_ctr \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/cur_we \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/t \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/rd_ptr \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/phase_ctr \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/nonce \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/w \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/cur_addr \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/offset \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/done_ph \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/message \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/ph1_h0 \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/ph1_h1 \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/ph1_h2 \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/ph1_h3 \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/ph1_h4 \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/ph1_h5 \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/ph1_h6 \
+sim:/tb_bitcoin_hash/bitcoin_hash_inst/ph1_h7
+# (vish-4014) No objects found matching '/tb_bitcoin_hash/bitcoin_hash_inst/k'.
+run -all
+# ---------------
+# 19 WORD HEADER:
+# ---------------
+# 01234567
+# 02468ace
+# 048d159c
+# 091a2b38
+# 12345670
+# 2468ace0
+# 48d159c0
+# 91a2b380
+# 23456701
+# 468ace02
+# 8d159c04
+# 1a2b3809
+# 34567012
+# 68ace024
+# d159c048
+# a2b38091
+# 45670123
+# 8ace0246
+# 159c048d
+# ***************************
+# 
+# ---------------------
+# COMPARE HASH RESULTS:
+# ---------------------
+# Correct H0[ 0] = 7106973a	Your H0[ 0] = 7106973a
+# Correct H0[ 1] = 6e66eea7	Your H0[ 1] = 6e66eea7
+# Correct H0[ 2] = fbef64dc	Your H0[ 2] = fbef64dc
+# Correct H0[ 3] = 0888a18c	Your H0[ 3] = 0888a18c
+# Correct H0[ 4] = 9642d5aa	Your H0[ 4] = 9642d5aa
+# Correct H0[ 5] = 2ab6af8b	Your H0[ 5] = 2ab6af8b
+# Correct H0[ 6] = 24259d8c	Your H0[ 6] = 24259d8c
+# Correct H0[ 7] = ffb9bcd9	Your H0[ 7] = ffb9bcd9
+# Correct H0[ 8] = 642138c9	Your H0[ 8] = 642138c9
+# Correct H0[ 9] = 054cafc7	Your H0[ 9] = 054cafc7
+# Correct H0[10] = 78251a17	Your H0[10] = 78251a17
+# Correct H0[11] = af8c8f22	Your H0[11] = af8c8f22
+# Correct H0[12] = d7a79ef8	Your H0[12] = d7a79ef8
+# Correct H0[13] = c7d10c84	Your H0[13] = c7d10c84
+# Correct H0[14] = 9537acfd	Your H0[14] = 9537acfd
+# Correct H0[15] = c1e4c72b	Your H0[15] = c1e4c72b
+# ***************************
+# 
+# CONGRATULATIONS! All your hash results are correct!
+# 
+# Total number of cycles:        2448
+# 
+# 
+# ***************************
+# 
+# ** Note: $stop    : D:/Varsha/serial/tb_bitcoin_hash_serial.sv(334)
+#    Time: 49010 ps  Iteration: 2  Instance: /tb_bitcoin_hash
+# Break in Module tb_bitcoin_hash at D:/Varsha/serial/tb_bitcoin_hash_serial.sv line 334
